@@ -67,12 +67,14 @@
             <p>
               Register with your personal details to use all of site features
             </p>
-            <button
-              class="bg-transparent text-[#fff] text-xs py-2.5 px-11 border border-[#fff] border-solid rounded-lg font-semibold tracking-wider uppercase mt-2.5 cursor-pointer"
-              id="register"
-            >
-              Sign Up
-            </button>
+            <NuxtLink to="sign-up">
+              <button
+                class="bg-transparent text-[#fff] text-xs py-2.5 px-11 border border-[#fff] border-solid rounded-lg font-semibold tracking-wider uppercase mt-2.5 cursor-pointer"
+                id="register"
+              >
+                Sign Up
+              </button>
+            </NuxtLink>
           </div>
         </div>
       </div>

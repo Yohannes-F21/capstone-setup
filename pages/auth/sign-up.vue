@@ -80,18 +80,20 @@
           class="toggle bg-[#7065F0] h-full text-[#fff] relative left-[-100] w-[200%] transform translate-x-0 transition duration-700 ease-in-out"
         >
           <div
-            class="toggle-panel absolute w-1/2 h-full flex items-center justify-center flex-col px-8 text-center top-0 transform translate-x-0 transition duration-700 ease-in-out toggle-left active:translate-x-[-200%]"
+            class="toggle-panel absolute w-1/2 h-full flex items-center justify-center flex-col px-8 text-center top-0"
           >
             <h1>Welcome Back!</h1>
             <p class="text-sm leading-5 tracking-[0.3px] my-5">
               Enter your personal details to use all of site features
             </p>
-            <button
-              class="bg-transparent text-[#fff] text-xs py-2.5 px-11 border border-[#fff] border-solid rounded-lg font-semibold tracking-wider uppercase mt-2.5 cursor-pointer"
-              id="login"
-            >
-              Sign In
-            </button>
+            <NuxtLink to="sign-in">
+              <button
+                class="bg-transparent text-[#fff] text-xs py-2.5 px-11 border border-[#fff] border-solid rounded-lg font-semibold tracking-wider uppercase mt-2.5 cursor-pointer"
+                id="login"
+              >
+                Sign In
+              </button>
+            </NuxtLink>
           </div>
         </div>
       </div>
