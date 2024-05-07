@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <div
-      class="bg-#fff rounded-3xl shadow-lg relative overflow-hidden w-[60%] max-w-[100%] min-h-[480px]"
+      class="bg-#fff rounded-3xl shadow-xl relative overflow-hidden w-[60%] max-w-[100%] min-h-[480px]"
       id="container"
     >
       <!-- <div
@@ -50,22 +50,51 @@
       </div> -->
       <div class="form-container absolute top-0 h-full sign-in left-0 w-1/2">
         <form
-          class="bg-[#fff] flex items-center justify-center flex-col px-10 h-full"
+          class="bg-[#fff] flex items-center justify-center flex-col px-10 h-full w-full"
         >
-          <h1 class="text-xl font-bold">Sign In</h1>
+          <h1 class="text-3xl font-bold text-black">Sign In</h1>
           <div
-            class="social-icons gap-2 flex justify-start items-center border rounded-md border-[#ccc] w-fit mt-5 mb-2 p-1"
+            class="social-icons gap-6 flex justify-start items-center border rounded-md border-[#ccc] w-[70%] mt-5 mb-2 p-1"
           >
             <a href="#" class="icon"><IconsGoogle /></a>
-            <p>Sign In with google</p>
+            <p class="text-[#333]">Sign In with Google</p>
           </div>
-          <span>or use your email password</span>
-          <input type="email" placeholder="Email" />
-          <input type="password" placeholder="Password" />
+          <span class="text-[#333] text-xs">or use your email password</span>
+          <!-- <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" /> -->
+
+          <UForm
+            :validate="validate"
+            :state="state"
+            class="space-y-4 w-full"
+            @submit="onSubmit"
+          >
+            <UFormGroup class="" label="" name="email">
+              <UInput
+                v-model="state.email"
+                placeholder="Email"
+                class="rounded-md py-1 px-3 w-full"
+              />
+            </UFormGroup>
+
+            <UFormGroup label="" name="password">
+              <UInput
+                v-model="state.password"
+                type="password"
+                placeholder="Password"
+                class="rounded-md py-1 px-3 w-full"
+              />
+            </UFormGroup>
+            <!-- <input type="text" class="border border-gray-300 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent rounded-md py-2 px-4 w-full"> -->
+
+            <!-- <UButton type="submit"> Submit </UButton> -->
+          </UForm>
+
           <a href="#" class="text-[#333] text-sm no-underline mt-3.5 mb-2.5"
             >Forget Your Password?</a
           >
           <button
+            type="submit"
             class="bg-[#512da8] text-[#fff] text-xs py-2.5 px-11 border border-transparent border-solid rounded-lg font-semibold tracking-wider uppercase mt-2.5 cursor-pointer"
           >
             Sign In
@@ -73,10 +102,10 @@
         </form>
       </div>
       <div
-        class="toggle-container absolute top-0 left-1/2 w-1/2 h-full overflow-hidden transition duration-700 ease-in-out rounded rounded-tl-[150px] rounded-bl-[100px] z-[1000]"
+        class="toggle-container bg-[#fff] absolute top-0 left-1/2 w-1/2 h-full overflow-hidden transition duration-700 ease-in-out rounded rounded-tl-[150px] rounded-bl-[100px] z-[1000]"
       >
         <div
-          class="toggle bg-[#512da8] h-full text-[#fff] relative left-[-100] w-[200%] transform translate-x-0 transition duration-700 ease-in-out"
+          class="toggle bg-[#7065F0] h-full text-[#fff] relative left-[-100] w-[200%] transform translate-x-0 transition duration-700 ease-in-out"
         >
           <!-- <div
             class="toggle-panel absolute w-1/2 h-full flex items-center justify-center flex-col px-8 text-center top-0 transform translate-x-0 transition duration-700 ease-in-out toggle-left active:translate-x-[-200%]"
@@ -112,11 +141,30 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+//import type { FormError, FormSubmitEvent } from '#ui/types'
+
+const state = reactive({
+  email: undefined,
+  password: undefined,
+});
+
+const validate = () => {
+  const errors = [];
+  if (!state.email) errors.push({ path: "email", message: "Required" });
+  if (!state.password) errors.push({ path: "password", message: "Required" });
+  return errors;
+};
+
+async function onSubmit() {
+  // Do something with data
+  // console.log(event.data)
+}
+</script>
 <style lang="css" scoped>
 .page {
   background-color: #e2e2e2;
-  /* background: linear-gradient(to right, #e2e2e2, #c9d6ff); */
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
   display: flex;
   align-items: center;
   justify-content: center;

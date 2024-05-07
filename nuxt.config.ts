@@ -1,6 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxtjs/tailwindcss", "shadcn-nuxt"],
+  modules: ["shadcn-nuxt", "@nuxt/ui"],
+  colorMode: {
+    preference: "light",
+  },
   shadcn: {
     /**
      * Prefix for all the imported component
