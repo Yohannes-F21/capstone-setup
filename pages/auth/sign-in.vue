@@ -3,7 +3,7 @@
     class="bg-[#e2e2e2] bg-[linear-gradient(to_right,_#e2e2e2,_#c9d6ff)] flex flex-col justify-center items-center h-screen"
   >
     <div
-      class="bg-#fff rounded-3xl shadow-xl relative overflow-hidden w-[60%] max-w-[100%] min-h-[480px]"
+      class="bg-[#fff] rounded-3xl shadow-xl relative overflow-hidden w-[60%] max-w-[100%] min-h-[480px]"
       id="container"
     >
       <div class="form-container absolute top-0 h-full sign-in left-0 w-1/2">
@@ -12,12 +12,14 @@
         >
           <h1 class="text-3xl font-bold text-black">Sign In</h1>
           <div
-            class="social-icons gap-6 flex justify-start items-center border rounded-md border-[#ccc] w-[70%] mt-5 mb-2 p-1"
+            class="social-icons gap-6 flex justify-start items-center border rounded-md bg-[#c9d6ff] border-[#ccc] w-[70%] mt-5 mb-2 p-1"
           >
             <a href="#" class="icon"><IconsGoogle /></a>
             <p class="text-[#333] text-sm">Sign In with Google</p>
           </div>
-          <span class="text-[#333] text-xs">or use your email password</span>
+          <span class="text-[#333] text-xs mb-1"
+            >or use your email password</span
+          >
 
           <UForm
             :validate="validate"
@@ -29,7 +31,8 @@
               <UInput
                 v-model="state.email"
                 placeholder="Email"
-                class="rounded-md py-1 px-3 w-full"
+                class=""
+                input-class="bg-[#e2e2e2] rounded-md py-2 px-3 w-full focus:outline-none focus:border-[#7065F0]"
               />
             </UFormGroup>
 
@@ -38,7 +41,8 @@
                 v-model="state.password"
                 type="password"
                 placeholder="Password"
-                class="rounded-md py-1 px-3 w-full"
+                class=""
+                input-class="bg-[#e2e2e2] rounded-md py-2 px-3 w-full"
               />
             </UFormGroup>
           </UForm>
