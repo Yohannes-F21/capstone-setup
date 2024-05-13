@@ -73,10 +73,12 @@
                 />
               </div>
               <div class="pt-6 text-center">
-                <p class="text-lg leading-normal font-bold mb-1">
+                <p
+                  class="text-lg leading-normal text-indigo-800 font-bold mb-1"
+                >
                   Yohannes Assefa
                 </p>
-                <p class="text-gray-500 leading-relaxed font-light">
+                <p class="text-indigo-500 leading-relaxed font-light">
                   Founder CEO
                 </p>
                 <!-- social icon -->
@@ -193,10 +195,12 @@
                 />
               </div>
               <div class="pt-6 text-center">
-                <p class="text-lg leading-normal font-bold mb-1">
+                <p
+                  class="text-lg leading-normal text-indigo-800 font-bold mb-1"
+                >
                   Tsion Tesfaye
                 </p>
-                <p class="text-gray-500 leading-relaxed font-light">
+                <p class="text-indigo-500 leading-relaxed font-light">
                   Software Engineer
                 </p>
                 <!-- social icon -->
@@ -313,10 +317,14 @@
                 />
               </div>
               <div class="pt-6 text-center">
-                <p class="text-lg leading-normal font-bold mb-1">
+                <p
+                  class="text-lg leading-normal text-indigo-800 font-bold mb-1"
+                >
                   Yohannes Fantahun
                 </p>
-                <p class="text-gray-500 leading-relaxed font-light">Dev ops</p>
+                <p class="text-indigo-500 leading-relaxed font-light">
+                  Dev ops
+                </p>
                 <!-- social icon -->
                 <div class="mt-2 mb-5 space-x-2">
                   <a
@@ -431,10 +439,12 @@
                 />
               </div>
               <div class="pt-6 text-center">
-                <p class="text-lg leading-normal font-bold mb-1">
+                <p
+                  class="text-lg leading-normal text-indigo-800 font-bold mb-1"
+                >
                   Tesfa Mariam
                 </p>
-                <p class="text-gray-500 leading-relaxed font-light">
+                <p class="text-indigo-500 leading-relaxed font-light">
                   UI/UX Designer
                 </p>
                 <!-- social icon -->
