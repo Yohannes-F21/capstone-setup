@@ -1,20 +1,21 @@
 <template>
   <div
-    class="absolute bottom-0 inset-x-0 p-4 bg-[#fff] flex flex-row flex-wrap justify-between items-center tracking-[normal] leading-[normal] text-left text-base text-[#839EA8]"
+    class="sticky mt-auto bottom-0 inset-x-0 shadow-md p-4 bg-[#fff] flex flex-row flex-wrap justify-between items-center tracking-[normal] leading-[normal] text-left text-base text-[#839EA8]"
   >
-    <button
-      class="text-base text-[#7065f0] border border-solid border-[#7065f0] px-4 py-2 rounded-md font-semibold hover:bg-[#7065f0] hover:text-[#fff]"
+    <UButton
+      color="indigo"
+      variant="outline"
+      class="hover:bg-indigo-500 hover:text-white"
     >
       Cancel
-    </button>
-    <button
-      class="text-base text-[#fff] border border-solid bg-[#7065f0] px-4 py-2 rounded-md font-semibold hover:bg-[#2D2774]"
-    >
+    </UButton>
+    <UButton color="indigo">
       Next
-    </button>
+      <template #trailing>
+        <UIcon name="i-heroicons-arrow-right-20-solid" class="w-5 h-5" />
+      </template>
+    </UButton>
   </div>
 </template>
 
 <script lang="ts" setup></script>
-
-<style></style>
