@@ -1,5 +1,5 @@
 <template>
-  <div class="w-[20%] h-screen bg-[#2d2774] flex text-[#839EA8]">
+  <div class="w-[19%] h-screen bg-[#2d2774] flex text-[#839EA8]">
     <div
       class="[text-decoration:none] flex-1 flex flex-col items-start justify-start my-16"
     >
